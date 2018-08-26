@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test name="Test Suite 1(failed)">
+    <classes>
+      <class name="com.test.testcases.TestMethods">
+        <methods>
+          <include name="authMethod"/>
+          <include name="deleteMethod" invocation-numbers="0"/>
+          <include name="postMethod" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.test.testcases.TestMethods -->
+    </classes>
+  </test> <!-- Test Suite 1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

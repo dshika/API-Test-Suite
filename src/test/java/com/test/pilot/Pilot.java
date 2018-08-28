@@ -16,26 +16,6 @@ public class Pilot {
 	public static void main(String[] args) {
 		
 		try {
-			RestApiConnector restApiConnector = new RestApiConnector("https://35.237.112.170/deepfence/v1.3", 
-					"application/json", false, "_hkHD8UaqO_BBq849ydCWQeHwbZYupqtcCm9WGLAcyc");
-			restApiConnector.setExt("/users/network_protection_policy/23");
-			
-			Response response = null;
-			
-			RequestSpecification reqSpec = given();
-			reqSpec.relaxedHTTPSValidation();
-			reqSpec.header("Authorization", "Bearer " + "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzUwNzAyNTYsImlhdCI6MTUzNDk4Mzg1NiwibmJmIjoxNTM0OTgzODU2LCJqdGkiOiI4YzZiMjVhMC1kOGRmLTRjYWItODQ4OS0xNjM2OGE2NzRjZjMiLCJpZGVudGl0eSI6eyJpZCI6MSwiZmlyc3RfbmFtZSI6IlJhbWFuYW4iLCJsYXN0X25hbWUiOiJSYXZpIiwiZW1haWwiOiJyYW1hbmFuQGRlZXBmZW5jZS5pbyIsImNvbXBhbnkiOiJkZWVwZmVuY2UiLCJyb2xlIjoiYWRtaW4iLCJhcGlfa2V5IjoiX2hrSEQ4VWFxT19CQnE4NDl5ZENXUWVId2JaWXVwcXRjQ205V0dMQWN5YyIsImNvbXBhbnlfbGljZW5zZV9leGlzdHMiOnRydWV9LCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.nqV6mM0B8CIdagVdA7gr-t9b9T5zx0xFAoTZ0kiktvY");
-			reqSpec.header("Content-type", restApiConnector.getContentType());
-			response = reqSpec.delete(restApiConnector.getBaseURL() + restApiConnector.getExt());
-			
-			if(response.getBody()!=null){
-			//JSONObject respData = new JSONObject(response.getBody().asString());
-			System.out.println(response.getBody().asString());
-			System.out.println(response.getStatusCode());
-			}
-			else{
-				System.out.println("Response body is null");
-			}
 			
 			
 		} catch (Exception ex) {
